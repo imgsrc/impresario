@@ -1,0 +1,131 @@
+@import ../../bourbon/bourbon
+@import vars
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder
+  color: transparent !important
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder
+  color: transparent !important
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder
+  color: transparent !important
+
+body
+  margin: 0
+  padding: 0
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.4
+  color: $color
+  font-family: $default-font
+  overflow-x: hidden
+
+.responsive-img
+  display: block
+  max-width: 100%
+  height: auto
+
+h1, h2, h3, h4, h5, h6
+  font-family: "OpenSansLight", sans-serif
+  font-weight: normal
+
+h1
+  font-size: em(41px)
+  line-height: 1.2
+  margin: 0
+
+
+h2
+  font-size: em(32px)
+
+h3, h4
+  font-family: "OpenSansSemiBold", sans-serif
+  text-transform: uppercase
+  font-size: em(15px)
+
+h4
+  font-size: em(13px)
+
+a
+  text-decoration: underline
+  color: $color
+  outline: none !important
+  &:hover
+    text-decoration: none
+
+b, strong
+  font-family: "OpenSansSemiBold", sans-serif
+  font-weight: normal
+
+.fa
+  color: $color
+  margin-right: 3px
+
+.button
+  display: inline-block
+  border: none
+  background-color: $blue
+  text-align: center
+  color: #fff
+  font-size: em(14px)
+  letter-spacing: 2px
+  text-transform: uppercase
+  padding: 13px 34px
+  border-radius: 3px
+  +mt(0.15s)
+  &:hover, &:focus
+    color: #fff
+    text-decoration: none
+  &:hover
+    background-color: $accent
+  &:active
+    background-color: $accent
+    transform: translateY(2px)
+
+.button-accent
+  background-color: transparent
+  border: 1px solid $accent
+  color: $accent
+  font-family: "OpenSansSemiBold", sans-serif
+  &:hover
+    background-color: $accent
+  &:active, &:focus
+    background-color: darken($accent, 6%)
+
+.button-small
+  padding: 9px 28px
+  font-size: em(13px)
+  background-color: $accent
+  &:hover
+    background-color: lighten($accent, 8%)
+  &:active, &:focus
+    background-color: darken($accent, 6%)
+
+.button-gray
+  background-color: #e8e8e8
+  color: #666
+
+section
+  padding: 80px 0
+  h2
+    margin-bottom: 50px

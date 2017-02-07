@@ -1,0 +1,58 @@
+@import ../../bourbon/bourbon
+@import fonts
+@import libs
+@import vars
+@import settings
+
+header
+  color: $color
+  position: relative
+  min-height: 100vh
+  background: #fff url("../img/bg2.jpg") no-repeat center top
+  background-size: cover
+
+.header-top
+    padding-top: 20px
+    .logo
+      img
+        width: 400px
+
+.header-contacts
+  .header-phone
+    margin-bottom: 15px
+    font-family: "Exo2Bold", sans-serif
+    font-size: em(19px)
+  .header-mail
+    font-family: "OpenSansLight", sans-serif
+  .fa
+    color: $accent
+    width: 15px
+
+.header-content
+  margin: 7% 0
+  h1
+    margin-bottom: 30px
+  p
+    margin-bottom: 30px
+  .button
+    margin-top: 40px
+    text-decoration: none
+
+.home-list
+  margin: 20px 0 0 0
+  text-align: left
+  padding: 0
+  display: block
+  list-style-type: none
+  font-family: "OpenSansSemiBold", sans-serif
+  font-size: em(17px)
+  line-height: 1.8
+
+.s-1
+  p
+    font-size: em(20px)
+    font-family: "OpenSansLight", sans-serif
+
+
+// Always end
+@import media
