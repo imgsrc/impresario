@@ -46,25 +46,32 @@ body
   height: auto
 
 h1, h2, h3, h4, h5, h6
-  font-family: "OpenSansLight", sans-serif
   font-weight: normal
 
+h1, h2
+  font-family: "OpenSansLight", sans-serif
+
 h1
-  font-size: em(41px)
+  font-size: em(45px)
   line-height: 1.2
   margin: 0
 
-
 h2
-  font-size: em(32px)
+  font-size: em(34px)
 
 h3, h4
   font-family: "OpenSansSemiBold", sans-serif
   text-transform: uppercase
-  font-size: em(15px)
+
+h3
+  font-size: em(22px)
 
 h4
-  font-size: em(13px)
+  font-size: em(18px)
+
+h5
+  font-size: em(16px)
+  font-weight: bold
 
 a
   text-decoration: underline
@@ -76,6 +83,9 @@ a
 b, strong
   font-family: "OpenSansSemiBold", sans-serif
   font-weight: normal
+
+ul
+  list-style-type: none
 
 .fa
   color: $color
@@ -90,6 +100,7 @@ b, strong
   font-size: em(14px)
   letter-spacing: 2px
   text-transform: uppercase
+  text-decoration: none
   padding: 13px 34px
   border-radius: 3px
   +mt(0.15s)
@@ -97,9 +108,12 @@ b, strong
     color: #fff
     text-decoration: none
   &:hover
-    background-color: $accent
+    background-color: transparent
+    color: $blue
+    border: 2px solid $blue
   &:active
-    background-color: $accent
+    background-color: darken($blue, 10%)
+    color: #fff
     transform: translateY(2px)
 
 .button-accent
@@ -129,3 +143,7 @@ section
   padding: 80px 0
   h2
     margin-bottom: 50px
+
+.s-yellow
+  background-color: lighten($accent, 10%)
+  color: #000

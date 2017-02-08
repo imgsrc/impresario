@@ -8,7 +8,7 @@ header
   color: $color
   position: relative
   min-height: 100vh
-  background: #fff url("../img/bg2.jpg") no-repeat center top
+  background: #fff url("../img/bg1.jpg") no-repeat center top
   background-size: cover
 
 .header-top
@@ -36,7 +36,6 @@ header
     margin-bottom: 30px
   .button
     margin-top: 40px
-    text-decoration: none
 
 .home-list
   margin: 20px 0 0 0
@@ -48,10 +47,73 @@ header
   font-size: em(17px)
   line-height: 1.8
 
-.s-1
-  p
-    font-size: em(20px)
-    font-family: "OpenSansLight", sans-serif
+.s-carousel
+  .owl-carousel
+    width: 100%
+    background-color: #0b0b0b
+    color: #fff
+
+.s-what
+  .col-sm-4
+    padding: 0
+    .home-list
+      font-size: em(20px)
+      margin-top: 30%
+      font-family: "OpenSansRegular", sans-serif
+      &.left
+        text-align: right
+        .fa
+          margin-left: 5px
+          margin-right: 0
+      li
+        margin-bottom: 15px
+  h4
+    margin-top: 40px
+    text-transform: none
+    font-size: em(24px)
+    font-family: "OpenSansSemiBold", sans-serif
+
+.s-about
+  background: #000 url(../img/bg2.jpg) no-repeat center top
+  background-size: cover
+  color: #fff
+  .s-about-item
+    display: block
+    text-decoration: none
+    color: #fff
+    &:hover, &:focus
+      color: darken($accent, 10%)
+    .s-about-img
+      img
+        display: inline-block
+        width: 200px
+
+.img-side
+  img
+    width: 400px
+    display: inline-block
+  &.left
+    text-align: right
+  &.right
+    text-align: left
+
+.text-side
+  margin-top: 45px
+  font-size: em(18px)
+  .button
+    margin-top: 40px
+  &.right
+    text-align: left
+  &.left
+    text-align: right
+
+
+.s-complex
+  .text-side
+    margin-top: 55px
+    li
+      margin-bottom: 10px
+
 
 
 // Always end

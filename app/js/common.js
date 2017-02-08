@@ -1,5 +1,5 @@
 $(function() {
 
-	// Custom JS
+    // var rellax = new Rellax('.s-about');
 
 });
