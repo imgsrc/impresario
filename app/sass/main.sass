@@ -18,6 +18,7 @@ header
         width: 400px
 
 .header-contacts
+  margin-top: 5px
   .header-phone
     margin-bottom: 15px
     font-family: "Exo2Bold", sans-serif
@@ -47,11 +48,31 @@ header
   font-size: em(17px)
   line-height: 1.8
 
-.s-carousel
-  .owl-carousel
-    width: 100%
-    background-color: #0b0b0b
-    color: #fff
+.s-slider
+  position: relative
+  padding: 0
+  background-color: #0b0b0b
+  color: #fff
+  .slider
+    .slides
+      padding-left: 0
+      .slide
+        position: relative
+        width: 100%
+        background-size: cover
+        height: 85vh
+        h2
+          position: absolute
+          top: 46%
+          left: 5%
+  .flex-direction-nav
+    display: none
+  .flex-control-nav
+    position: absolute
+    left: 0
+    bottom: 10px
+    .flex-active
+      background-color: $accent
 
 .s-what
   .col-sm-4
@@ -74,15 +95,19 @@ header
     font-family: "OpenSansSemiBold", sans-serif
 
 .s-about
-  background: #000 url(../img/bg2.jpg) no-repeat center top
+  background: transparent
   background-size: cover
   color: #fff
   .s-about-item
     display: block
     text-decoration: none
     color: #fff
+    img
+      +mt(.5s)
     &:hover, &:focus
       color: darken($accent, 10%)
+      img
+        transform: scale(1.2)
     .s-about-img
       img
         display: inline-block
@@ -112,9 +137,101 @@ header
   .text-side
     margin-top: 55px
     li
-      margin-bottom: 10px
+      margin-bottom: 5px
+      font-size: em(15px)
+
+.s-audience
+  .img-side
+    margin-top: 80px
+    img
+      width: 500px
+  .text-side
+    h4
+      margin-bottom: 20px
+    p
+      font-size: em(15px)
+      line-height: 1.7
+      text-indent: 10px
+      strong
+        font-size: em(18px)
+    a
+      .fa
+        font-size: 40px
+        color: orangered
+        margin-left: 10px
+      &:hover, &:focus
+        .fa
+          color: lighten($accent, 30%)
+
+.text-bottom
+  margin-top: 50px
+  &-l
+    padding-right: 55px
+    line-height: 1.7
+    text-indent: 10px
+  &-r
+    .home-list
+      font-family: "OpenSansRegular", sans-serif
 
 
+.s-target
+  .text-side
+    p
+      line-height: 1.7
+      margin-bottom: 30px
+    .home-list
+      margin-top: 10px
+      text-align: right
+      font-family: "OpenSansRegular", sans-serif
+  .img-side
+    margin-top: 40px
+
+.s-works
+  .col-md-3
+    padding: 0
+  .slide
+    position: relative
+    overflow: hidden
+    display: block
+    a
+      display: block
+    &:hover
+      .slide-content
+        opacity: 1
+        transform: scale(.95)
+    img
+      +mt(.5s)
+    &-content
+      position: absolute
+      color: darken($color, 10%)
+      padding-top: 25%
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0
+      background-color: rgba($accent, .65)
+      text-align: center
+      +mt(.5s)
+      transform: scale(1.1)
+      .fa
+        color: darken($color, 10%)
+        font-size: 40px
+        padding: 20px 20px 5px
+  h3
+    text-transform: none
+    font-size: em(22px)
+
+.slide-popup
+  position: relative
+  background-color: #fff
+  max-width: 900px
+  margin: auto
+  text-align: center
+  display: block
+  +mt(.25s)
+  .col-sm-12
+    padding: 0
 
 // Always end
 @import media

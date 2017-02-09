@@ -35,7 +35,7 @@ body
   font-size: 16px
   min-width: 320px
   position: relative
-  line-height: 1.4
+  line-height: 1.5
   color: $color
   font-family: $default-font
   overflow-x: hidden
@@ -103,7 +103,7 @@ ul
   text-decoration: none
   padding: 13px 34px
   border-radius: 3px
-  +mt(0.15s)
+  +mt(0.25s)
   &:hover, &:focus
     color: #fff
     text-decoration: none
@@ -147,3 +147,90 @@ section
 .s-yellow
   background-color: lighten($accent, 10%)
   color: #000
+
+
+
+
+
+
+//Magnific Popup Customize
+.mfp-ready .mfp-figure
+  opacity: 0
+
+.mfp-zoom-in
+  .mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+    opacity: 0
+    transition: all 0.3s ease-out
+    transform: scale(0.95)
+  &.mfp-bg, .mfp-preloader
+    opacity: 0
+    transition: all 0.3s ease-out
+  &.mfp-image-loaded .mfp-figure
+    opacity: 1
+    transform: scale(1)
+  &.mfp-ready
+    .mfp-iframe-holder .mfp-iframe-scaler
+      opacity: 1
+      transform: scale(1)
+    &.mfp-bg, .mfp-preloader
+      opacity: 0.8
+  &.mfp-removing
+    .mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+      transform: scale(0.95)
+      opacity: 0
+    &.mfp-bg, .mfp-preloader
+      opacity: 0
+
+.mfp-iframe-scaler
+  overflow: visible
+
+.mfp-zoom-out-cur
+  cursor: auto
+  .mfp-image-holder .mfp-close
+    cursor: pointer
+
+.mfp-preloader
+  width: 30px !important
+  height: 30px !important
+  background-color: $accent
+  opacity: 0.8
+  margin: 0 auto
+  animation: rotateplane 1.2s infinite ease-in-out
+
+@keyframes rotateplane
+  0%
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  50%
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  100%
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+
+//End MFP
+
+//Fade-zoom animation for first dialog
+.my-mfp-zoom-in
+  .slide-popup,
+  .form-callback
+    opacity: 0
+    transform: scale(0.8)
+  &.mfp-ready .slide-popup,
+  &.mfp-ready .form-callback
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .slide-popup,
+  &.mfp-removing .form-callback
+    transform: scale(0.8)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.3s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+*
+  transition: filter .25s ease
+
+.mfp-wrap ~ *
+  filter: blur(5px)
