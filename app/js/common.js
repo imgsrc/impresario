@@ -7,7 +7,7 @@ $(function() {
     $(".slider").flexslider({
         animation: "slide",
         itemMargin: 0,
-        animationSpeed: 1000
+        animationSpeed: 2000
     });
 
     $(".owl-carousel").owlCarousel({
@@ -22,6 +22,20 @@ $(function() {
         animationLoop: true,
         itemwidth: 500,
         itemMargin: 5
+    });
+
+    //Magnific Popup
+    var callBack = $('a[href="#callback"]');
+    callBack.magnificPopup({
+        mainClass: 'my-mfp-zoom-in',
+        removalDelay: 300,
+        type: 'inline'
+    });
+    callBack.on('click', function () {
+        var dataForm = $(this).data('form');
+        var dataText = $(this).data('text');
+        $('.form-callback h4').text(dataText);
+        $('.form-callback [name=admin-data]').val(dataForm);
     });
 
     $(".bad-vk").magnificPopup({type: "image"});

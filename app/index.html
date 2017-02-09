@@ -548,6 +548,113 @@
   </div><!-- ./container -->
 </section><!-- ./s-works -->
 
+<section class="s-contacts">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Наши контакты</h2>
+      </div><!-- ./col-sm-12 text-center -->
+  
+      <div class="col-sm-6">
+        <form class="contact-form">
+      
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="project_name" value="Импресарио">
+          <input type="hidden" name="admin_email" value="forifelse@yandex.ru">
+          <input type="hidden" name="form_subject" value="Новая заявка с сайта">
+          <!-- END Hidden Required Fields -->
+      
+          <div class="contact-form-head">
+            <h4>Оставьте сообщение, и мы свяжемся с вами в течение 20 минут.</h4>
+          </div><!-- ./contact-form-head -->
+      
+          <label>
+            <span>Ваше имя:</span>
+            <input type="text" name="Имя" placeholder="Ваше имя...">
+          </label>
+      
+          <label>
+            <span>Ваш телефон:</span>
+            <input type="tel" name="Телефон" placeholder="Ваш телефон..." required>
+          </label>
+      
+          <label>
+            <span>Сообщение:</span>
+            <textarea name="Сообщение" rows="6" placeholder="Ваше сообщение..."></textarea>
+          </label>
+      
+          <div class="text-center">
+            <button class="button">Отправить</button>
+          </div><!-- ./text-center -->
+    
+        </form><!-- ./contact-form -->
+      </div><!-- ./col-sm-6 -->
+  
+      <div class="col-sm-6">
+        <div class="contacts-text">
+          <h3>Также вы можете связаться с нами любым удобным для вас способом:</h3>
+          <p><i class="fa fa-mobile"></i><strong> Телефон:</strong> +7 (987) 94-11-462</p>
+          <p><i class="fa fa-envelope"></i><strong> Почта:</strong>
+            <a href="mailto:darilesa2016@yandex.ru">darilesa2016@yandex.ru</a>
+          </p>
+          <div class="contacts-social">
+            <a href="#" target="_blank"><img src="./img/icons/vk.svg" alt="VK"></a>
+            <a href="#" target="_blank"><img src="./img/icons/instagram.svg"
+                                                                                alt="Instagram"></a>
+          </div>
+          <div class="text-center">
+            <a href="#callback" class="button"
+               data-form="Заказать обратный звонок: нижняя"
+               data-text="Заказать звонок">Заказать обратный звонок</a>
+          </div>
+        </div><!-- ./contacts-text -->
+      </div><!-- ./col-sm-6 -->
+      
+    </div><!-- ./row -->
+  </div><!-- ./container -->
+</section><!-- ./s-contacts -->
+
+<div class="hidden">
+  <form id="callback" class="contact-form form-callback">
+    
+    <div class="success">
+      <p>Спасибо за заявку!</p>
+    </div>
+    
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="admin-data">
+    <input type="hidden" name="project_name" value="Грибная лавка">
+    <input type="hidden" name="admin_email" value="darilesa2016@yandex.ru">
+    <input type="hidden" name="form_subject" value="Новая заявка с сайта">
+    <!-- END Hidden Required Fields -->
+    
+    <div class="contact-form-head">
+      <h4>Оставить заявку</h4>
+    </div><!-- ./contact-form-head -->
+    
+    <label>
+      <span>Ваше имя:</span>
+      <input type="text" name="Имя" placeholder="Ваше имя...">
+    </label>
+    
+    <label>
+      <span>Ваш телефон:</span>
+      <input type="tel" name="Телефон" placeholder="Ваш телефон..." required>
+    </label>
+    
+    <div class="text-center">
+      <button class="button button-gray">Отправить</button>
+    </div><!-- ./text-center -->
+  
+  </form>
+</div>
+
+<div class="answer_form">
+  <h3>Спасибо за отклик!</h3>
+  <p>В ближайшее время наши менеджеры обязательно свяжутся с вами</p>
+  <!--<a href="#" class="button">Закрыть</a>-->
+</div><!-- ./answer_form -->
+
 <script src="js/scripts.min.js"></script>
 
 </body>
