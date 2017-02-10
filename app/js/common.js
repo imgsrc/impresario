@@ -1,8 +1,22 @@
-$(function() {
+$(function () {
 
-    $("html").niceScroll();
+    $("html").niceScroll({scrollspeed: 90});
 
-    $('#s-about').parallax({imageSrc: '../img/bg2.jpg'});
+    //WOW animate
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0
+    });
+    wow.init();
+
+    $(".bad-vk").magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: true
+    });
+
+    $('#s-about').parallax({imageSrc: './img/bg2.jpg'});
 
     $(".slider").flexslider({
         animation: "slide",
@@ -10,19 +24,6 @@ $(function() {
         animationSpeed: 2000
     });
 
-    $(".owl-carousel").owlCarousel({
-        margin:10,
-        loop:true,
-        autoWidth:true,
-        items:4
-    });
-
-    $(".works-slider").flexslider({
-        animation: "slide",
-        animationLoop: true,
-        itemwidth: 500,
-        itemMargin: 5
-    });
 
     //Magnific Popup
     var callBack = $('a[href="#callback"]');
@@ -38,7 +39,6 @@ $(function() {
         $('.form-callback [name=admin-data]').val(dataForm);
     });
 
-    $(".bad-vk").magnificPopup({type: "image"});
     var slide = $('.slide');
     slide.each(function (e) {
         var th = $(this);
@@ -51,4 +51,25 @@ $(function() {
         removalDelay: 300,
         type: 'inline'
     });
+
+    //E-mail Ajax Send
+    $('form').submit(function () { //Change
+        var th = $(this);
+        $.ajax({
+            type: 'POST',
+            url: 'mail.php', //Change
+            data: th.serialize()
+        }).done(function () {
+            $('.form-callback .success').addClass('active');
+            setTimeout(function () {
+                // Done Functions
+                $('.form-callback .success').removeClass('active');
+                th.trigger('reset');
+                $.magnificPopup.close();
+            }, 2000);
+        });
+        return false;
+    });
+
+
 });

@@ -20,6 +20,7 @@ gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/jquery-migrate/jquery-migrate.min.js',
+        'app/libs/wow/dist/wow.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/flexslider/jquery.flexslider-min.js',
         'app/libs/owl.carousel/dist/owl.carousel.min.js',
