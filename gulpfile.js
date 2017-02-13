@@ -22,8 +22,6 @@ gulp.task('scripts', function () {
         'app/libs/jquery-migrate/jquery-migrate.min.js',
         'app/libs/wow/dist/wow.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'app/libs/flexslider/jquery.flexslider-min.js',
-        'app/libs/owl.carousel/dist/owl.carousel.min.js',
         'app/libs/parallax.js/parallax.min.js',
         'app/libs/jquery.nicescroll/jquery.nicescroll.min.js',
         'app/js/common.js' // Всегда в конце

@@ -53,26 +53,6 @@ header
   padding: 0
   background-color: #0b0b0b
   color: #fff
-  .slider
-    .slides
-      padding-left: 0
-      .slide
-        position: relative
-        width: 100%
-        background-size: cover
-        height: 85vh
-        h2
-          position: absolute
-          top: 46%
-          left: 5%
-  .flex-direction-nav
-    display: none
-  .flex-control-nav
-    position: absolute
-    left: 0
-    bottom: 10px
-    .flex-active
-      background-color: $accent
 
 .s-what
   .col-sm-4
@@ -135,25 +115,18 @@ header
 
 .s-complex
   .text-side
-    margin-top: 55px
-    li
-      margin-bottom: 5px
-      font-size: em(15px)
+    margin-top: 25px
+    ul
+      padding-left: 0
+      li
+        font-size: em(15px)
+  .button
+    margin-top: 40px
 
 .s-audience
-  .img-side
-    margin-top: 80px
-    img
-      width: 500px
-  .text-side
+  .top-text
     h4
-      margin-bottom: 20px
-    p
-      font-size: em(15px)
-      line-height: 1.7
-      text-indent: 10px
-      strong
-        font-size: em(18px)
+      font-size: em(16px)
     a
       .fa
         font-size: 40px
@@ -162,17 +135,22 @@ header
       &:hover, &:focus
         .fa
           color: lighten($accent, 30%)
-
-.text-bottom
-  margin-top: 50px
-  &-l
-    padding-right: 55px
-    line-height: 1.7
-    text-indent: 10px
-  &-r
-    .home-list
-      font-family: "OpenSansRegular", sans-serif
-
+    strong
+      font-size: em(18px)
+  .img-side
+    margin-top: 80px
+    img
+      width: 500px
+  .text-side
+    p
+      font-size: em(15px)
+      line-height: 1.7
+      text-indent: 10px
+      strong
+        font-size: em(18px)
+  .home-list
+    font-size: em(15px)
+    margin-left: 0
 
 .s-target
   .text-side
@@ -180,8 +158,9 @@ header
       line-height: 1.7
       margin-bottom: 30px
     .home-list
+      text-align: left
       margin-top: 10px
-      text-align: right
+      margin-left: 0
       font-family: "OpenSansRegular", sans-serif
   .img-side
     margin-top: 40px

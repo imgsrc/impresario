@@ -18,13 +18,6 @@ $(function () {
 
     $('#s-about').parallax({imageSrc: './img/bg2.jpg'});
 
-    $(".slider").flexslider({
-        animation: "slide",
-        itemMargin: 0,
-        animationSpeed: 2000
-    });
-
-
     //Magnific Popup
     var callBack = $('a[href="#callback"]');
     callBack.magnificPopup({
@@ -70,6 +63,4 @@ $(function () {
         });
         return false;
     });
-
-
 });
